@@ -1,0 +1,108 @@
+/* A) HEADER SECTION */
+.header {
+  width: 100vw;
+  height: 3vh;
+  padding: 1rem 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+  background-color: transparent;
+  font-size: 1.2rem;
+}
+.header img {
+  height: 8vh;
+}
+.navbar-web {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;    
+  width: 70%;
+
+}
+
+.navbar-web a {
+  text-decoration: none;
+  color: var(--font-color-1);
+  font-weight: bold;
+  
+}
+
+.navbar-web .join {
+  background-color: var(--bg-color-2);
+  border-radius: 1rem;
+  width: 6rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem;
+}
+.menu-btn,
+.menu-icon {
+  display: none;
+}
+/* RESPONSIVE DESIGN FOR 576PX SCREEN */
+@media screen and (max-width: 576px) {
+  .header {
+    height: 4vh;
+    justify-content: space-between;
+  }
+ 
+  .header img  {
+    height: 8vh;
+    padding: 0 0 0 1rem;
+  }
+ /* Menü İkonu */
+.menu-icon {
+  display: block;
+  font-size: 2rem;
+  color: var(--font-color-1);
+  cursor: pointer;
+  padding: 2rem;
+}
+
+/* Menü Kontrolü */
+.menu-btn {
+  display: none;
+}
+
+/* Navbar */
+.navbar-web {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  position: absolute;
+  padding: 1rem;
+  top: 9vh;
+  right: -100%;
+  background-color: var(--bg-color-3);
+  gap: 0.6rem;
+  transition: right 0.5s ease;
+}
+
+/* Menü Açılma Durumu */
+.menu-btn:checked ~ .navbar-web {
+  right: 0;
+}
+
+/* Menü Bağlantıları */
+.navbar-web ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-web ul li {
+  margin: 1rem 0;
+}
+
+.navbar-web ul li a {
+  color: var(--font-color-1);
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+}
